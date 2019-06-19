@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -133,4 +133,124 @@ table {
 html,
 body {
   height: 100%;
+}
+/* less styling */
+.globalflex {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.container header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.container header nav {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+.container header nav a {
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  padding: 10px;
+}
+.cta {
+  background-color: #e9ecef;
+  margin: 0 2rem;
+}
+.cta img {
+  width: 45%;
+  margin: 40px 0px 0px 40px;
+}
+.cta-text h1 {
+  font-size: 3rem;
+  margin: 0px 0px 0px 40px;
+  font-family: "Raleway", sans-serif;
+}
+.cta-text h3 {
+  margin: 10px 0px 30px 47px;
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+}
+.cta-text p {
+  font-size: 1rem;
+  margin: 10px 10px 20px 30px;
+  font-family: "Raleway", sans-serif;
+  border-top: 1px solid black;
+  padding: 30px 0 0 0;
+}
+button {
+  margin: 10px 0 10px 30px;
+  background-color: grey;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+/* Top Container Css*/
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.top-container h3 {
+  margin: 20px 0 5px 0;
+}
+.about-me {
+  /* .globalflex(); */
+  flex-direction: column;
+  width: 45%;
+  margin-left: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+}
+.about-me p {
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+.list-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 47%;
+  margin-right: 2rem;
+}
+.list-content ul {
+  border: 1px solid lightgrey;
+  width: 100%;
+}
+ul li {
+  border-bottom: 1px solid lightgrey;
+  padding: 13px;
+  font-family: "Raleway", sans-serif;
+}
+.bottom-container {
+  margin: 2rem;
+}
+table {
+  width: 100%;
+}
+th,
+td {
+  text-align: left;
+  padding: 10px 10px 10px 20px;
+  font-family: "Raleway", sans-serif;
+}
+tr:nth-child(even) {
+  background-color: #e9ecef;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  font-family: "Raleway", sans-serif;
 }
