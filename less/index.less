@@ -139,7 +139,8 @@ body {
   height: 100%;
 }
 
-/* less styling */
+// Preproccessing //
+
 @backgroundcolor: #e9ecef;
 
 .ffbasic() {
@@ -147,14 +148,25 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+.mediamargin {
+  width: 100%;
+  margin: 0px;
+}
+
 .globalflex {
   display: flex;
   justify-content: center;
 }
 
+// less Container Styling //
+
 .container {
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 
   header {
     width: 100%;
@@ -283,6 +295,62 @@ tr:nth-child(even) {
 
 footer {
   .globalflex();
-  margin: 2rem 0;
+  margin: 5rem 0;
   font-family: "Raleway", sans-serif;
+}
+
+// media css //
+
+@media (max-width: 500px) {
+  .container header {
+    width: 100%;
+    .globalflex;
+    .mediamargin;
+  }
+}
+
+@media (max-width: 500px) {
+  .container a {
+    display: flex;
+    justify-content: space-between;
+    .mediamargin;
+  }
+}
+
+@media (max-width: 500px) {
+  .cta {
+    width: 100%;
+    .mediamargin;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-me {
+    width: 100%;
+    /* .mediamargin; */
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .list-content {
+    width: 100%;
+    /* .mediamargin; */
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .bottom-container {
+    width: 100%;
+    /* .mediamargin; */
+    margin: 10px 0;
+  }
 }

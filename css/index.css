@@ -134,14 +134,22 @@ html,
 body {
   height: 100%;
 }
-/* less styling */
+.mediamargin {
+  width: 100%;
+  margin: 0px;
+}
 .globalflex {
   display: flex;
   justify-content: center;
 }
 .container {
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
 }
 .container header {
   width: 100%;
@@ -251,6 +259,55 @@ tr:nth-child(even) {
 footer {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 5rem 0;
   font-family: "Raleway", sans-serif;
+}
+@media (max-width: 500px) {
+  .container header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .container a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .cta {
+    width: 100%;
+    margin: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .top-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  .about-me {
+    width: 100%;
+    /* .mediamargin; */
+    margin: 10px 0;
+  }
+}
+@media (max-width: 500px) {
+  .list-content {
+    width: 100%;
+    /* .mediamargin; */
+    margin: 10px 0;
+  }
+}
+@media (max-width: 500px) {
+  .bottom-container {
+    width: 100%;
+    /* .mediamargin; */
+    margin: 10px 0;
+  }
 }
