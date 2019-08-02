@@ -139,78 +139,63 @@ body {
   height: 100%;
 }
 
-// Preproccessing //
-
-@backgroundcolor: #e9ecef;
-
-.ffbasic() {
-  font-size: 1.5rem;
-  font-family: "Raleway", sans-serif;
-}
-
+//  Preproccessing
 .mediamargin {
   width: 100%;
   margin: 0px;
 }
-
 .globalflex {
   display: flex;
   justify-content: center;
 }
-
-// less Container Styling //
-
 .container {
   width: 100%;
   margin: auto;
-
-  @media (max-width: 500px) {
+}
+@media (max-width: 500px) {
+  .container {
     width: 100%;
-  }
-
-  header {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-
-    nav {
-      width: 25%;
-      display: flex;
-      justify-content: space-between;
-      margin: 1rem;
-
-      a {
-        text-decoration: none;
-        color: black;
-        font-family: "Montserrat", sans-serif;
-        font-size: 0.8rem;
-        padding: 10px;
-      }
-    }
   }
 }
-
+.container header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.container header nav {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+.container header nav a {
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  padding: 10px;
+}
+header nav a:hover {
+  color: red;
+}
 .cta {
-  background-color: @backgroundcolor;
+  background-color: #e9ecef;
   margin: 0 2rem;
 }
-
 .cta img {
   width: 45%;
   margin: 40px 0px 0px 40px;
 }
-
 .cta-text h1 {
   font-size: 3rem;
   margin: 0px 0px 0px 40px;
   font-family: "Raleway", sans-serif;
 }
-
 .cta-text h3 {
   margin: 10px 0px 30px 47px;
-  .ffbasic();
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
 }
-
 .cta-text p {
   font-size: 1rem;
   margin: 10px 10px 20px 30px;
@@ -218,7 +203,6 @@ body {
   border-top: 1px solid black;
   padding: 30px 0 0 0;
 }
-
 button {
   margin: 10px 0 10px 30px;
   background-color: grey;
@@ -227,110 +211,102 @@ button {
   font-size: 1rem;
   border-radius: 4px;
 }
-
+button:hover {
+  color: red;
+}
 /* Top Container Css*/
-
 .top-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
 .top-container h3 {
   margin: 20px 0 5px 0;
 }
-
 .about-me {
   /* .globalflex(); */
   flex-direction: column;
   width: 45%;
   margin-left: 2rem;
 }
-
 h3 {
-  .ffbasic();
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
 }
-
 .about-me p {
   font-size: 1rem;
   font-family: "Raleway", sans-serif;
 }
-
 .list-content {
-  .globalflex();
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   width: 47%;
   margin-right: 2rem;
 }
-
 .list-content ul {
   border: 1px solid lightgrey;
   width: 100%;
 }
-
 ul li {
   border-bottom: 1px solid lightgrey;
   padding: 13px;
   font-family: "Raleway", sans-serif;
 }
-
 .bottom-container {
   margin: 2rem;
 }
-
 table {
   width: 100%;
 }
-
 th,
 td {
   text-align: left;
-  padding: 10px 10px 10px 20px;
+  padding: 20px 10px 20px 10px;
   font-family: "Raleway", sans-serif;
 }
-
 tr:nth-child(even) {
-  background-color: @backgroundcolor;
+  background-color: #e9ecef;
 }
-
 footer {
-  .globalflex();
-  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
   font-family: "Raleway", sans-serif;
 }
-
-// media css //
-
 @media (max-width: 500px) {
   .container header {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    .globalflex;
-    .mediamargin;
+    margin: 0px;
   }
 }
-
+@media (max-width: 500px) {
+  .container header nav {
+    width: 100%;
+  }
+}
 @media (max-width: 500px) {
   .container a {
     display: flex;
     justify-content: space-between;
-    .mediamargin;
+    width: 100%;
+    margin: 0px;
   }
 }
-
 @media (max-width: 500px) {
   .cta {
     width: 100%;
-    .mediamargin;
+    margin: 0px;
   }
 }
-
 @media (max-width: 500px) {
   .top-container {
     display: flex;
     flex-direction: column;
   }
 }
-
 @media (max-width: 500px) {
   .about-me {
     width: 100%;
@@ -338,7 +314,6 @@ footer {
     margin: 10px 0;
   }
 }
-
 @media (max-width: 500px) {
   .list-content {
     width: 100%;
@@ -346,11 +321,15 @@ footer {
     margin: 10px 0;
   }
 }
-
 @media (max-width: 500px) {
   .bottom-container {
     width: 100%;
     /* .mediamargin; */
     margin: 10px 0;
+  }
+}
+@media (max-width: 500px) {
+  .container footer {
+    margin: 30px;
   }
 }
